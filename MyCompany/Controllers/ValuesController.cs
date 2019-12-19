@@ -13,25 +13,22 @@ namespace MyCompany.Controllers
     {
         CompanyService service = new CompanyService();
         // GET api/values
-        //[HttpGet]
-        //public ActionResult<List<Employees>> Get()
-        //{
-   
-        //    return service.GetAllInclude();
-        //}
+        [HttpGet]
+        public ActionResult<List<Employees>> Get()
+        {
+            return service.GetAllInclude().OrderBy(x => x.EmployeeName).ToList();
+           // return service.GetAllInclude();
+        }
 
         // GET api/values/5
-        [HttpGet("{id}")]
+        [HttpGet("Employee/{id}")]
         public ActionResult<Employees> Get(int id)
         {
             return service.GetAll().Where(x=>x.EmployeeId == id).FirstOrDefault();
         }
 
-
-
-
-        [HttpGet]
-        public ActionResult<List<Skills>> Get()
+        [HttpGet("Skill")]
+        public ActionResult<List<Skills>> GetAllSkill()
         {
 
             return service.GetAllSkill();

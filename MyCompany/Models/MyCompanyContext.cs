@@ -22,8 +22,8 @@ namespace MyCompany.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=MyCompany;Trusted_Connection=True;");
-               // optionsBuilder.UseSqlServer("Server=PWWS08;Database=MyCompany;User Id=pwws;Password=abc123;");
+               // optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=MyCompany;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=PWWS08;Database=MyCompany;User Id=pwws;Password=abc123;");
             }
         }
 
