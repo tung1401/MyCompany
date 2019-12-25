@@ -23,6 +23,8 @@ namespace MyCompany.Models
 
 
 
+
+
         public List<Skills> GetAllSkill()
         {
             var query = _dbContext.Skills.ToList();
